@@ -1,0 +1,58 @@
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loanForm{
+  background-color: rgb(51, 0, 170);
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 10px  15px 20px rgba(0, 0, 0, 0.355);
+  width: 55%;
+}
+label{
+  margin-top: 15px;
+}
+input , select{
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 7px;
+}
+button{
+  margin-top: 10px;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 7px;
+  background: rgb(211, 0, 127);
+  color: white;
+}
+.disabled{
+  background-color: gray!important;
+}
+hr{
+  width: 100%;
+}
+#model{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.653);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#model-contant{
+  background-color: white;
+  color: green; 
+  text-align: center;
+  padding: 20px;
+  width: 60%;
+}
