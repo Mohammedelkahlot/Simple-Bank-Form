@@ -45,7 +45,7 @@ function Form({title}){
     // upupt handler
 
     function handelPhonNumberInputChange(value){
-        setFormInput({...inputForm,PhonNumber:value})
+        setFormInput({...inputForm,phonNuber:value})
     }
 
     function handelNameInputChange(value){
@@ -57,7 +57,7 @@ function Form({title}){
 
     return(<>
         <div className="flex" style={{flexDirection:"column"}} onClick={handelDevClike}>  
-        <h1>{title}</h1>
+        <h1 >{title}</h1>
 
             <form id="loanForm" className="flex" style={{flexDirection:"column"}} >
                 <h1>Reqsteing a loan</h1>

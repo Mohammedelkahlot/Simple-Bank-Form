@@ -1,3 +1,4 @@
+@import "tailwindcss";
 *{
   padding: 0%;
   margin: 0%;
@@ -55,4 +56,250 @@ hr{
   text-align: center;
   padding: 20px;
   width: 60%;
+}
+
+/* form  */
+/* تحسينات للـ form الرئيسي */
+
+
+#loanForm {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  width: 55%;
+  max-width: 500px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* عنوان الـ form */
+#loanForm h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* تحسين الخط الفاصل */
+#loanForm hr {
+  width: 100%;
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  margin: 20px 0;
+}
+
+/* تحسين الـ labels */
+#loanForm label {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* تحسين حقول الإدخال */
+#loanForm input, 
+#loanForm select {
+  width: 100%;
+  height: 45px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 0 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#loanForm input:focus,
+#loanForm select:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* تحسين الزر */
+#loanForm button {
+  margin-top: 25px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(238, 90, 36, 0.3);
+}
+
+#loanForm button:hover:not(.disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(238, 90, 36, 0.4);
+  background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+}
+
+#loanForm button:active:not(.disabled) {
+  transform: translateY(-1px);
+}
+
+/* تحسين الـ checkbox */
+#loanForm input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* تحسين خيارات الـ select */
+#loanForm select option {
+  background: #667eea;
+  color: white;
+}
+
+/* model */
+
+/* تحسينات للـ Model الرئيسي */
+#model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* تحسينات لمحتوى الـ Model */
+#model-contant {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  text-align: center;
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: slideIn 0.4s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* إضافة خلفية مزينة */
+#model-contant::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #4CAF50, #45a049, #4CAF50);
+  animation: shimmer 2s infinite;
+}
+
+/* تحسينات للعنوان */
+#model-contant h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* حالة النجاح */
+#model-contant.success h1 {
+  color: #4CAF50;
+  text-shadow: 0 2px 4px rgba(76, 175, 80, 0.2);
+}
+
+/* حالة الخطأ */
+#model-contant.error h1 {
+  color: #f44336;
+  text-shadow: 0 2px 4px rgba(244, 67, 54, 0.2);
+}
+
+/* إضافة أيقونات */
+#model-contant::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+#model-contant.success::after {
+  content: '✓';
+  background: #4CAF50;
+  color: white;
+}
+
+#model-contant.error::after {
+  content: '✕';
+  background: #f44336;
+  color: white;
+}
+
+/* الحركات والانتقالات */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 768px) {
+  #model-contant {
+    width: 95%;
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  
+  #model-contant h1 {
+    font-size: 1.3rem;
+  }
 }

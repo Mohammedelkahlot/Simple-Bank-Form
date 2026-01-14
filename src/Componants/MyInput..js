@@ -5,9 +5,9 @@ const MyInput = () => {
 
     return (
         <>
-          <label>{inputContext.labelTitel}</label>
+          <label>{myContext.labelTitel}</label>
                 <input
-                    value={inputContext.value}
+                    value={myContext.value}
                     onChange={(event)=>{
                         myContext.handleChange(event.target.value)
                     }}/> 
